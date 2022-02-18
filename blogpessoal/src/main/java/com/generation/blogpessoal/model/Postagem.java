@@ -13,8 +13,8 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-@Table(name = "tb_postagens")
-public class Postagem {
+@Table(name = "tb_postagens") // minha tablea está relacionada à Classe Postagem
+public class Postagem {  //abaixo estão os atributos
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Postagem {
 	private String titulo;
 	
 	@NotBlank(message = "O atributo texto é obrigatório!")
-	@Size(min = 5, max = 1000, message = "O atributo texto deve conter no mínimo 5 e no máximo 1000 caract")
+	@Size(min = 3, max = 1000, message = "O atributo texto deve conter no mínimo 5 e no máximo 1000 caract")
 	private String texto;
 	
 	
