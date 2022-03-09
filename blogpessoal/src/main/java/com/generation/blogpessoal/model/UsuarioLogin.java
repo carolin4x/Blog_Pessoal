@@ -1,10 +1,11 @@
 package com.generation.blogpessoal.model;
 
 /**
- * A Classe UsuarioLogin não terá nenhuma annotation porque ela
- * não irá gerar uma tabela no DB.
+ * A Classe UsuarioLogin não terá nenhuma annotation porque ela não irá gerar
+ * uma tabela no DB.
  * 
- * A principal função desta classe é servir de apoio ao processo de login na API.
+ * A principal função desta classe é servir de apoio ao processo de login na
+ * API.
  * 
  */
 public class UsuarioLogin {
@@ -20,6 +21,19 @@ public class UsuarioLogin {
 	private String foto;
 
 	private String token;
+
+	public UsuarioLogin(Long id, String nome, String usuario, String senha, String foto, String token) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.foto = foto;
+		this.token = token;
+	}
+
+	public UsuarioLogin() {
+	}
 
 	public Long getId() {
 		return id;
@@ -67,6 +81,6 @@ public class UsuarioLogin {
 
 	public void setFoto(String foto) {
 		this.foto = foto;
-	}	
-	
+	}
+
 }

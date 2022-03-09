@@ -24,7 +24,7 @@ public class Tema {
 	@NotBlank(message = "O atributo é obrigatório")
 	private String descricao;
 	
-	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL) //mapped dá o nome pro meu relacionamento entre Postagem e Tema (tema)
+	@OneToMany(mappedBy = "tema", cascade = CascadeType.REMOVE) //mapped dá o nome pro meu relacionamento entre Postagem e Tema (tema)
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
 			// cascade: diz que toda alteração na tb_temas vai afetar tbm a tb_postagem, efeito Cascata
